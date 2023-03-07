@@ -1,0 +1,18 @@
+name: Create issues for inactive users
+
+on:
+  schedule:
+    - cron: "15 12 * * 0"
+  workflow_dispatch:
+
+jobs:
+  report:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: oss-tooling/user-inactivity/.github/actions/report@v1
+        with:
+          org: oss-tooling
+          repo: _activity
+          APP_ID: ${{ secrets.APP_ID }}
+          APP_PRIVATE_KEY: ${{ secrets.APP_PRIVATE_KEY }}
+          APP_INSTALLATION_ID: ${{ secrets.APP_INSTALLATION_ID }}
