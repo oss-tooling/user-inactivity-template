@@ -9,7 +9,7 @@ jobs:
   report:
     runs-on: ubuntu-latest
     steps:
-      - uses: oss-tooling/user-inactivity/.github/actions/report@v1
+      - uses: oss-tooling/user-inactivity/.github/actions/report@v1.0.2
         with:
           org: oss-tooling
           repo: _activity

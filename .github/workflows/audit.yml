@@ -9,7 +9,7 @@ jobs:
   audit:
     runs-on: ubuntu-latest
     steps:
-      - uses: oss-tooling/user-inactivity/.github/actions/audit@v1
+      - uses: oss-tooling/user-inactivity/.github/actions/audit@v1.0.2
         with:
           org: oss-tooling
           APP_ID: ${{ secrets.APP_ID }}
